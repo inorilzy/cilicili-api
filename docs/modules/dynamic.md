@@ -386,6 +386,8 @@ BuildDynamic.create_by_args(text="114514", topic_id=114514)
 
 ### async def get_lottery_info()
 
+> ⚠️ **[2025 已失效]** B站接口返回 `code: -9999 服务系统错误`，该接口可能已被废弃。
+
 获取动态抽奖信息
 
 
@@ -410,6 +412,8 @@ BuildDynamic.create_by_args(text="114514", topic_id=114514)
 
 
 ### async def get_reposts()
+
+> ⚠️ **[2025 已失效]** B站已下线动态转发列表接口，调用返回 HTTP 404。
 
 获取动态转发列表
 

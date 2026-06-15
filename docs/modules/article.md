@@ -67,6 +67,8 @@ from bilibili_api import article
 
 ### async def fetch_content()
 
+> ⚠️ **[2025 已失效]** B站专栏数据结构已变更，`initial_state` 页面不再包含 `readInfo` 字段，调用此方法会抛出 `InitialStateException` 或 `KeyError: 'readInfo'`。
+
 获取并解析专栏内容
 
 该返回不会返回任何值，调用该方法后请再调用 `self.markdown()` 或 `self.json()` 来获取你需要的值。

@@ -95,6 +95,8 @@ from bilibili_api import live_area
 
 ## async def get_list_by_area()
 
+> ⚠️ **[2025 代码 Bug]** `order` 参数类型 `LiveRoomOrder` 枚举已不存在于 `bilibili_api.live_area` 模块中，传入该枚举会触发 `AttributeError`。请直接传入字符串（如 `""`）代替。
+
 根据分区获取直播间列表
 
 

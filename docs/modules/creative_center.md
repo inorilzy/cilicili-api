@@ -503,6 +503,8 @@ from bilibili_api import creative_center
 
 ## async def get_article_source()
 
+> ⚠️ **[2025 已失效]** B站已下线该接口，调用返回 HTTP 404。
+
 获取文章阅读终端数据
 
 
