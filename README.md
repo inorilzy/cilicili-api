@@ -27,6 +27,15 @@ Github 仓库：[https://github.com/nemo2011/bilibili-api](https://github.com/ne
 > 模块最早由 @MoyuScript 于 2020 年创建，于 2022 年宣布停止维护。本仓库是原仓库 fork，遵循 `GNU General Public License Version 3`。在此感谢早期的众多模块贡献者与 @MoyuScript 对新仓库的支持。
 > 见 `MoyuScript/bilibili-api` 的 [第一条 commit (2020.01.27)](https://github.com/Nemo2011/bilibili-api/commit/8dc3f9a05fa28ed9b060cafa6d5c23131a28a113)与 [最后一条 commit (2022.01.17)](https://github.com/Nemo2011/bilibili-api/commit/dc518016c7649be2a135ccb8badb091712754a3d)。
 
+## 本仓库说明
+
+`cilicili-api` 是基于 `bilibili-api` 的个人维护 / 实验仓库。上游文档、安装包名称和大量示例仍沿用 `bilibili-api-python`。使用前请先确认你需要的是：
+
+- 上游稳定包：优先参考 [Nemo2011/bilibili-api](https://github.com/Nemo2011/bilibili-api)。
+- 本仓库改动：查看当前分支、提交记录、`CHANGELOGS/`、`docs/` 和本仓库 issue。
+
+本仓库不承诺和上游完全同步，也不承诺对 Bilibili 私有接口变化提供稳定 SLA。
+
 # 简介
 
 这是一个用 Python 写的调用 [Bilibili](https://www.bilibili.com) 各种 API 的库，
@@ -170,6 +179,20 @@ from bilibili_api import request_settings
 request_settings.set("impersonate", "chrome131") # 第二参数数值参考 curl_cffi 文档
 # https://curl-cffi.readthedocs.io/en/latest/impersonate.html
 ```
+
+## Troubleshooting
+
+### 安装后 import 失败
+
+确认安装的是你期望的包来源。上游包名是 `bilibili-api-python`，本仓库本地开发建议使用 editable install。
+
+### 接口突然失败
+
+Bilibili 接口、风控和返回结构可能变化。先更新到最新代码，再检查 cookies、请求库、代理和对应模块的 issue。
+
+### 应该用哪个请求库？
+
+项目支持 `aiohttp` / `httpx` / `curl_cffi`。如果遇到风控或 TLS 指纹问题，可以优先尝试 `curl_cffi`。
 
 # FA♂Q
 
